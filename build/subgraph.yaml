@@ -78,3 +78,459 @@ dataSources:
         - event: Withdraw(indexed address,uint256,uint256)
           handler: handleWithdraw
       file: RisqUNIPool/RisqUNIPool.wasm
+  - kind: ethereum/contract
+    name: RisqLINKPool
+    network: bsc
+    source:
+      address: "0xf60c7Ed4954f5DfEfea116aE851A8D4DBB864541"
+      abi: RisqLINKPool
+      startBlock: 9097096
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Loss
+        - OwnershipTransferred
+        - Profit
+        - Provide
+        - Transfer
+        - Withdraw
+      abis:
+        - name: RisqLINKPool
+          file: RisqLINKPool/abis/RisqLINKPool.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+      file: RisqLINKPool/RisqLINKPool.wasm
+  - kind: ethereum/contract
+    name: RisqBNBPool
+    network: bsc
+    source:
+      address: "0x6249C0e395Ab75f047183B21d2755babBD795A6f"
+      abi: RisqBNBPool
+      startBlock: 9097096
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Loss
+        - OwnershipTransferred
+        - Profit
+        - Provide
+        - Transfer
+        - Withdraw
+      abis:
+        - name: RisqBNBPool
+          file: RisqBNBPool/abis/RisqBNBPool.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+      file: RisqBNBPool/RisqBNBPool.wasm
+  - kind: ethereum/contract
+    name: RisqWBTCPool
+    network: bsc
+    source:
+      address: "0x5D6e644eBeE654a78BeB1207F33ce79Ca475Fd4E"
+      abi: RisqWBTCPool
+      startBlock: 9097096
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Loss
+        - OwnershipTransferred
+        - Profit
+        - Provide
+        - Transfer
+        - Withdraw
+      abis:
+        - name: RisqWBTCPool
+          file: RisqWBTCPool/abis/RisqWBTCPool.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+      file: RisqWBTCPool/RisqWBTCPool.wasm
+  - kind: ethereum/contract
+    name: RisqETHPool
+    network: bsc
+    source:
+      address: "0x7095b510f402463df8db51de869629f7094487c2"
+      abi: RisqETHPool
+      startBlock: 9097096
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Loss
+        - OwnershipTransferred
+        - Profit
+        - Provide
+        - Transfer
+        - Withdraw
+      abis:
+        - name: RisqETHPool
+          file: RisqETHPool/abis/RisqETHPool.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+      file: RisqETHPool/RisqETHPool.wasm
+  - kind: ethereum/contract
+    name: RisqBCHPool
+    network: bsc
+    source:
+      address: "0x262ECE00f404D01e6824e345a36C7330d8BCe34e"
+      abi: RisqBCHPool
+      startBlock: 9097096
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Loss
+        - OwnershipTransferred
+        - Profit
+        - Provide
+        - Transfer
+        - Withdraw
+      abis:
+        - name: RisqBCHPool
+          file: RisqBCHPool/abis/RisqBCHPool.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+      file: RisqBCHPool/RisqBCHPool.wasm
+  - kind: ethereum/contract
+    name: RisqLTCPool
+    network: bsc
+    source:
+      address: "0xDE6046fE176d3D84A71312e589d9c3C629e92768"
+      abi: RisqLTCPool
+      startBlock: 9097096
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Loss
+        - OwnershipTransferred
+        - Profit
+        - Provide
+        - Transfer
+        - Withdraw
+      abis:
+        - name: RisqLTCPool
+          file: RisqLTCPool/abis/RisqLTCPool.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+      file: RisqLTCPool/RisqLTCPool.wasm
+  - kind: ethereum/contract
+    name: RisqPAXGPool
+    network: bsc
+    source:
+      address: "0xC62A72186B25e5bC966b53Ee91415B4724ff52C7"
+      abi: RisqPAXGPool
+      startBlock: 9097096
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Loss
+        - OwnershipTransferred
+        - Profit
+        - Provide
+        - Transfer
+        - Withdraw
+      abis:
+        - name: RisqPAXGPool
+          file: RisqPAXGPool/abis/RisqPAXGPool.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+      file: RisqPAXGPool/RisqPAXGPool.wasm
+  - kind: ethereum/contract
+    name: RisqCOMPPool
+    network: bsc
+    source:
+      address: "0xfe477c25b5286cc2304987af7cd05274962cf593"
+      abi: RisqCOMPPool
+      startBlock: 9097096
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Loss
+        - OwnershipTransferred
+        - Profit
+        - Provide
+        - Transfer
+        - Withdraw
+      abis:
+        - name: RisqCOMPPool
+          file: RisqCOMPPool/abis/RisqCOMPPool.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+      file: RisqCOMPPool/RisqCOMPPool.wasm
+  - kind: ethereum/contract
+    name: RisqTSLAPool
+    network: bsc
+    source:
+      address: "0x91313522182d5aFa7862012619fFedBf745c41F2"
+      abi: RisqTSLAPool
+      startBlock: 9097096
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Loss
+        - OwnershipTransferred
+        - Profit
+        - Provide
+        - Transfer
+        - Withdraw
+      abis:
+        - name: RisqTSLAPool
+          file: RisqTSLAPool/abis/RisqTSLAPool.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+      file: RisqTSLAPool/RisqTSLAPool.wasm
+  - kind: ethereum/contract
+    name: RisqAMZNPool
+    network: bsc
+    source:
+      address: "0x3d0bA06e66DC6405D64Db542473fDDe6243147F3"
+      abi: RisqAMZNPool
+      startBlock: 9097096
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Loss
+        - OwnershipTransferred
+        - Profit
+        - Provide
+        - Transfer
+        - Withdraw
+      abis:
+        - name: RisqAMZNPool
+          file: RisqAMZNPool/abis/RisqAMZNPool.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+      file: RisqAMZNPool/RisqAMZNPool.wasm
+  - kind: ethereum/contract
+    name: RisqGOOGLPool
+    network: bsc
+    source:
+      address: "0x27883d6d5A0FEf1Cf565928259BBe1deaa2CF715"
+      abi: RisqGOOGLPool
+      startBlock: 9097096
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Loss
+        - OwnershipTransferred
+        - Profit
+        - Provide
+        - Transfer
+        - Withdraw
+      abis:
+        - name: RisqGOOGLPool
+          file: RisqGOOGLPool/abis/RisqGOOGLPool.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+      file: RisqGOOGLPool/RisqGOOGLPool.wasm
+  - kind: ethereum/contract
+    name: RisqYFIPool
+    network: bsc
+    source:
+      address: "0x9a1f6843fc4bbe923b35e1f55462aecee09fe2fe"
+      abi: RisqYFIPool
+      startBlock: 9097096
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Loss
+        - OwnershipTransferred
+        - Profit
+        - Provide
+        - Transfer
+        - Withdraw
+      abis:
+        - name: RisqYFIPool
+          file: RisqYFIPool/abis/RisqYFIPool.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+      file: RisqYFIPool/RisqYFIPool.wasm
