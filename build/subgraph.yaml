@@ -40,3 +40,41 @@ dataSources:
         - event: Withdraw(indexed address,uint256,uint256)
           handler: handleWithdraw
       file: RisqCAKEPool/RisqCAKEPool.wasm
+  - kind: ethereum/contract
+    name: RisqUNIPool
+    network: bsc
+    source:
+      address: "0xf0cc28dee2df4e3482a09809cf6F26A41Fa65e4d"
+      abi: RisqUNIPool
+      startBlock: 9097096
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Loss
+        - OwnershipTransferred
+        - Profit
+        - Provide
+        - Transfer
+        - Withdraw
+      abis:
+        - name: RisqUNIPool
+          file: RisqUNIPool/abis/RisqUNIPool.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+      file: RisqUNIPool/RisqUNIPool.wasm

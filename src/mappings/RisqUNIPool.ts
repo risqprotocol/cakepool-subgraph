@@ -1,6 +1,6 @@
 import { BigInt } from "@graphprotocol/graph-ts"
 import {
-  RisqCAKEPool,
+  RisqUNIPool,
   Approval,
   Loss,
   OwnershipTransferred,
@@ -8,8 +8,8 @@ import {
   Provide,
   Transfer,
   Withdraw
-} from "../generated/RisqCAKEPool/RisqCAKEPool"
-import { ProvideType } from "../generated/schema"
+} from "../../generated/RisqUNIPool/RisqUNIPool"
+import { ProvideType } from "../../generated/schema"
 
 export function handleApproval(event: Approval): void {
 }
