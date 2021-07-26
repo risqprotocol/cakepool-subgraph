@@ -1,28 +1,19 @@
 {
-  "name": "risq-options-subgraph",
-  "version": "1.0.0",
-  "license": "MIT",
+  "name": "option-pools",
+  "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
-    "create-local": "graph create risqprotocol/cakepool-subgraph --node http://127.0.0.1:8020",
+    "create-local": "graph create risqprotocol/option-pools --node http://127.0.0.1:8020",
     "build": "graph build",
-    "deploy-local": "graph deploy risqprotocol/cakepool-subgraph --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
-    "deploy": "graph deploy risqprotocol/cakepool-subgraph --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
+    "deploy-local": "graph deploy risqprotocol/option-pools --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
+    "deploy": "graph deploy risqprotocol/option-pools --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/ --debug",
     "deploy-staging": "graph deploy $THE_GRAPH_GITHUB_USER/$THE_GRAPH_SUBGRAPH_NAME /Protean --ipfs https://api.staging.thegraph.com/ipfs/ --node https://api.staging.thegraph.com/deploy/",
-    "watch-local": "graph deploy graphprotocol/cakepool-subgraph --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
+    "watch-local": "graph deploy graphprotocol/option-pools --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
   },
-  "devDependencies": {
-    "@graphprotocol/graph-cli": "^0.20.1",
-    "@graphprotocol/graph-ts": "^0.20.1",
-    "@typescript-eslint/eslint-plugin": "^2.0.0",
-    "@typescript-eslint/parser": "^2.0.0",
-    "eslint": "^6.2.2",
-    "eslint-config-prettier": "^6.1.0",
-    "prettier": "^1.18.2",
-    "typescript": "^3.5.2"
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.21.0",
+    "@graphprotocol/graph-ts": "0.20.0"
   },
-  "dependencies": {},
-
   "resolutions": {
     "assemblyscript": "git+https://github.com/AssemblyScript/assemblyscript.git#v0.6"
   }
