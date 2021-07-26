@@ -1,0 +1,37 @@
+specVersion: 0.0.2
+description: Risq Protocol Crypto Options.
+repository: https://github.com/risqprotocol/cakepool-subgraph/
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: CAKELiquidityPool
+    network: bsc
+    source:
+      address: '0xD6A2782a2f6229CBF258633EB71725E92D6A19d2'
+      abi: LiquidityPool
+      startBlock: 8898493
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/mappings/CAKELiquidityPool.ts
+      entities:
+        - LiquidityPool
+      abis:
+        - name: RisqOptions
+          file: ./abis/IRisqOptions.json
+        - name: LiquidityPool
+          file: ./abis/ILiquidityPool.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Profit(indexed uint256,uint256)
+          handler: handleProfit
+        - event: Loss(indexed uint256,uint256)
+          handler: handleLoss
+        - event: Provide(indexed address,uint256,uint256)
+          handler: handleProvide
+        - event: Withdraw(indexed address,uint256,uint256)
+          handler: handleWithdraw
+  
