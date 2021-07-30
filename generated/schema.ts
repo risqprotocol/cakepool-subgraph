@@ -51,6 +51,15 @@ export class ProvideType extends Entity {
     this.set("account", Value.fromBytes(value));
   }
 
+  get contract(): Bytes {
+    let value = this.get("contract");
+    return value.toBytes();
+  }
+
+  set contract(value: Bytes) {
+    this.set("contract", Value.fromBytes(value));
+  }
+
   get amount(): BigInt {
     let value = this.get("amount");
     return value.toBigInt();
